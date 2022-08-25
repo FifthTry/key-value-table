@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/table/assets
+-- import: fifthtry.github.io/key-value-table/assets
 -- import: fifthtry.github.io/package-doc/doc as pd
 
 -- boolean is-mobile: false
@@ -21,7 +21,7 @@ background-color: $fpm.color.main.background.base
 -- pd.package: `key-value-table` and it's Usage
 name: fifthtry.github.io/key-value-table as kvt
 
-To use `table` on your web package, add below into `FPM.ftd` file:
+To use `key-value-table` on your web package, add below into `FPM.ftd` file:
 
 -- cb.code:
 lang: ftd
