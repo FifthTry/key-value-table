@@ -1,1 +1,304 @@
--- ds.page: hello
+-- import: fifthtry.github.io/key-value-table/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
+
+-- boolean is-mobile: false
+
+-- is-mobile: true
+if: $ftd.device == mobile
+
+
+-- ftd.column:
+width: fill
+padding-horizontal: 50
+padding-vertical: 20
+padding-horizontal if $is-mobile: 20
+background-color: $fpm.color.main.background.base
+
+
+
+
+
+-- pd.package: `key-value-table` and it's Usage
+name: fifthtry.github.io/key-value-table as kvt
+
+To use `key-value-table` on your web package, add below into `FPM.ftd` file:
+
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/key-value-table as kvt
+\-- fpm.auto-import: kvt
+
+
+
+
+-- pd.hidden-code: `key-value-table` list
+
+
+\-- kvt list kv:
+
+\-- kv: Attack Vector
+value: Network
+
+More severe the more the remote (logically and physically) an attacker can be in 
+order to exploit the vulnerability
+
+\-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+
+
+\-- kv: Attack Vector
+value: Network
+
+More severe for the least complex attacks.
+
+
+\-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+
+
+
+\-- kv: Attack Vector
+value: Network
+
+More severe for the least complex attacks.
+
+
+\-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+More severe for the least complex attacks.More severe for the least complex attacks.
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+
+\-- kv: Attack Vector
+value: Network
+
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+
+
+\-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+
+-- tf.markdown:
+
+Once you add above lines into your web package, add `key-value-table` into your `.ftd` 
+files:
+
+-- cb.code: Example code for `-- key-value-table`
+lang: ftd
+
+\-- key-value-table.key-value-table: CVSS base metrics
+data: $kv
+
+
+-- key-value-table: CVSS base metrics
+data: $kv
+
+
+
+
+-- record kvt:
+caption key:
+string value:
+body body:
+
+-- kvt list kv:
+
+-- kv: Attack Vector
+value: Network
+
+More severe the more the remote (logically and physically) an attacker can be in 
+order to exploit the vulnerability
+
+-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+
+
+-- kv: Attack Vector
+value: Network
+
+More severe for the least complex attacks.
+
+
+-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+
+
+
+-- kv: Attack Vector
+value: Network
+
+More severe for the least complex attacks.
+
+
+-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+More severe for the least complex attacks.More severe for the least complex attacks.
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+
+-- kv: Attack Vector
+value: Network
+
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+
+
+-- kv: Attack complexity
+value: Low
+
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+More severe for the least complex attacks.
+
+
+
+
+
+
+
+
+
+
+-- ftd.column key-value-table:
+caption title:
+kvt list data: 
+padding-top: 24
+padding-bottom: 12
+padding-horizontal: 24
+border-width: 2
+border-color: $fpm.color.main.border
+border-radius: 12
+background-color: $fpm.color.main.background.base
+color: $fpm.color.main.text
+width: auto
+min-width: percent 50
+spacing: 20
+
+--- ftd.text: $title
+role: $fpm.type.copy-tight
+style: bold
+width: fill
+
+
+--- ftd.column:
+width: fill
+
+--- kv-loop:
+key: $obj.key
+value: $obj.value
+body: $obj.body
+$loop$: $data as $obj
+
+
+
+
+
+
+
+
+
+
+-- ftd.row kv-loop:
+width: fill
+caption key:
+string value:
+body body:
+color: $fpm.color.main.text
+padding-bottom: $fpm.space.space-4
+boolean show-tooltip: false
+spacing: 64
+
+--- ftd.column:
+width: fill
+$on-mouse-enter$: $show-tooltip = true
+$on-mouse-leave$: $show-tooltip = false
+
+--- tooltip:
+if: $show-tooltip
+$body: $body
+
+--- ftd.text: $key
+role: $fpm.type.copy-relaxed
+border-bottom: 2
+border-color: $fpm.color.main.border
+border-style: dashed
+padding-bottom: 2
+
+--- container: ftd.main
+
+--- ftd.row:
+align: right
+
+--- ftd.text: $value
+role: $fpm.type.copy-relaxed
+
+
+
+
+
+
+
+
+
+
+-- ftd.column tooltip:
+width: 200
+id: tooltip-container
+body $body:
+anchor: parent
+top: -12
+left: -56
+
+--- ftd.row:
+width: fill
+min-width: percent 120
+bottom: 0
+left: 0
+anchor: parent
+background-color: $fpm.color.main.text-strong
+padding-vertical:4
+padding-horizontal:8
+border-radius: 8
+border-width: 1
+border-color: $fpm.color.main.text-strong
+
+--- ftd.text: 
+text: $body
+role: $fpm.type.copy-relaxed
+color: $fpm.color.main.background.step-1
+
+--- container: ftd.main
+
+--- ftd.row:
+width: 0
+height: 0
+border-top: 8
+border-left: 8
+border-right: 8
+border-top-color: $fpm.color.main.text-strong
+border-bottom-color: $fpm.color.main.background.base
+border-left-color: $fpm.color.main.background.base
+border-right-color: $fpm.color.main.background.base
+anchor: parent
+top: 0
+left: 110
