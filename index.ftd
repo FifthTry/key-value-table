@@ -1,4 +1,4 @@
--- import: fifthtry.github.io/key-value-table/assets
+-- import: fifthtry.github.io/table/assets
 -- import: fifthtry.github.io/package-doc/doc as pd
 
 -- boolean is-mobile: false
@@ -21,7 +21,7 @@ background-color: $fpm.color.main.background.base
 -- pd.package: `key-value-table` and it's Usage
 name: fifthtry.github.io/key-value-table as kvt
 
-To use `key-value-table` on your web package, add below into `FPM.ftd` file:
+To use `table` on your web package, add below into `FPM.ftd` file:
 
 -- cb.code:
 lang: ftd
@@ -35,76 +35,36 @@ lang: ftd
 -- pd.hidden-code: `key-value-table` list
 
 
-\-- kvt list kv:
+\--  kvt.kvt list data:
 
-\-- kv: Attack Vector
+\-- data: Lorem ipsum
 value: Network
 
-More severe the more the remote (logically and physically) an attacker can be in 
-order to exploit the vulnerability
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-\-- kv: Attack complexity
+\-- data: Lorem ipsum
 value: Low
 
-More severe for the least complex attacks.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-
-\-- kv: Attack Vector
+\-- data: Lorem ipsum
 value: Network
 
-More severe for the least complex attacks.
-
-
-\-- kv: Attack complexity
-value: Low
-
-More severe for the least complex attacks.
-
-
-
-\-- kv: Attack Vector
-value: Network
-
-More severe for the least complex attacks.
-
-
-\-- kv: Attack complexity
-value: Low
-
-More severe for the least complex attacks.
-More severe for the least complex attacks.More severe for the least complex attacks.
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-
-\-- kv: Attack Vector
-value: Network
-
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-
-
-\-- kv: Attack complexity
-value: Low
-
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-More severe for the least complex attacks.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 -- tf.markdown:
 
-Once you add above lines into your web package, add `key-value-table` into your `.ftd` 
-files:
+Once you add above lines into your web package
 
--- cb.code: Example code for `-- key-value-table`
+-- cb.code: Example code 
 lang: ftd
 
-\-- key-value-table.key-value-table: CVSS base metrics
-data: $kv
+\-- kvt.table: CVSS base metrics
+data: $data
 
 
--- key-value-table: CVSS base metrics
-data: $kv
+-- table: CVSS base metrics
+data: $data
 
 
 
@@ -114,61 +74,22 @@ caption key:
 string value:
 body body:
 
--- kvt list kv:
+-- kvt list data:
 
--- kv: Attack Vector
+-- data: Lorem ipsum
 value: Network
 
-More severe the more the remote (logically and physically) an attacker can be in 
-order to exploit the vulnerability
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
--- kv: Attack complexity
+-- data: Lorem ipsum
 value: Low
 
-More severe for the least complex attacks.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-
--- kv: Attack Vector
+-- data: Lorem ipsum
 value: Network
 
-More severe for the least complex attacks.
-
-
--- kv: Attack complexity
-value: Low
-
-More severe for the least complex attacks.
-
-
-
--- kv: Attack Vector
-value: Network
-
-More severe for the least complex attacks.
-
-
--- kv: Attack complexity
-value: Low
-
-More severe for the least complex attacks.
-More severe for the least complex attacks.More severe for the least complex attacks.
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-
--- kv: Attack Vector
-value: Network
-
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-
-
--- kv: Attack complexity
-value: Low
-
-More severe for the least complex attacks.
-More severe for the least complex attacks.
-More severe for the least complex attacks.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 
 
@@ -177,9 +98,7 @@ More severe for the least complex attacks.
 
 
 
-
-
--- ftd.column key-value-table:
+-- ftd.column table:
 caption title:
 kvt list data: 
 padding-top: 24
