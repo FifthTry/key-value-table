@@ -2,7 +2,7 @@
 
 -- fpm.package: fifthtry.github.io/key-value-table
 zip: github.com/fifthtry/key-value-table/archive/refs/heads/main.zip
-base: https://raw.githubusercontent.com/fifthtry/key-value-table/main
+download-base-url: https://raw.githubusercontent.com/fifthtry/key-value-table/main
 
 -- fpm.dependency: fifthtry.github.io/package-doc as pd
 
